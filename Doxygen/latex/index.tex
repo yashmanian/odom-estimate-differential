@@ -39,10 +39,11 @@ Example code on how to use the library has been included in the cpp file \hyperl
 6 ./OdomEstimate
 \end{DoxyCode}
 
-\item Run the tests\+: 
+\item Test results\+: The math was intially verified in M\+A\+T\+L\+AB. The outputs from M\+A\+T\+L\+AB have been stored in \char`\"{}\+Files/\+O\+P\char`\"{}. These cover a multitude of scenarios. A python script is used to plot and save the figures in Files/\+Figures. The main script generates a csv file which allows the Python script to read the current test case being worked on. 
 \begin{DoxyCode}
-1 cd build
-2 ./test/matrix-test
+1 cd Files
+2 chmod -x plot.py
+3 python plot.py
 \end{DoxyCode}
  To use these functions in your own code. Add the include directory path to the compiler debugging. Include to the start of your code and call the functions\+:
 \item To use\+: 

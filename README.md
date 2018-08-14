@@ -36,10 +36,12 @@ make
 cd src
 ./OdomEstimate
 ```
-* Run the tests:
+* Test results:
+The math was intially verified in MATLAB. The outputs from MATLAB have been stored in "Files/OP". These cover a multitude of scenarios. A python script is used to plot and save the figures in Files/Figures. The main script generates a csv file which allows the Python script to read the current test case being worked on.
 ```
-cd build
-./test/matrix-test
+cd Files
+chmod -x plot.py
+python plot.py
 ```
 To use these functions in your own code. Add the include directory path to the compiler debugging. Include to the start of your code and call the functions:
 * To use:
