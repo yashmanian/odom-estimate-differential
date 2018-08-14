@@ -64,23 +64,21 @@ int main()
 	string lineA;
 
 	// Filename parsing to make multiple runs more convenient
-	string filepathIP = "../../Files/IP/input";
-	string filepathOP = "../../Files/Outputs/output";
+	string filepathIP = "../../Files/IP/IP";
+	string filepathOP = "../../Files/Outputs/OP";
 	string ext =  ".csv";
-	string fileKey = "10";
+	string fileKey = "4";
 	string filenameIP = filepathIP + fileKey + ext;
 	string filenameOP = filepathOP + fileKey + ext;
 
 	const char* F_op = filenameOP.c_str();
-
-	cout << filenameIP << " " << filenameOP << endl;
 
 	// Read file with encoder values	
 	ifstream ifs(filepathIP + fileKey + ext);
 
 	// Open Output File	
 	ofstream ofs;
-	ofs.open("../Files/Outputs/temp.csv", ios::out | ios::binary);
+	ofs.open("../../Files/Outputs/temp.csv", ios::out | ios::binary);
 
 	// Check for error opening the file
 	if(!ifs.is_open())
@@ -126,8 +124,8 @@ int main()
 
 	ifs.close();
 	ofs.close();
-	//remove(F_op);
-	//rename("../Files/Outputs/temp.csv", F_op);
+	remove(F_op);
+	rename("../../Files/Outputs/temp.csv", F_op);
 
 	return 0;
 }

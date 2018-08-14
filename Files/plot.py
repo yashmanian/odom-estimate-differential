@@ -2,11 +2,11 @@ import matplotlib.pyplot as plt
 import csv
 import numpy as np
 
-filepathM = 'OP/output'
-filepathCpp = 'Outputs/output'
+filepathM = 'OP/OP'
+filepathCpp = 'Outputs/OP'
 ext =  '.csv'
 ext_fig = '.png'
-fileKey = '_10'
+fileKey = '4'
 filenameM = filepathM + fileKey + ext
 filenameCpp = filepathCpp + fileKey + ext
 filepathFig = 'Figures/figure'

@@ -73,8 +73,7 @@ vector<double> Odom::estimate(double time, double steerAngle, int encTicks, doub
 	this->pos_acc = pos_acc + pos_s;
 
 	// Estimate Odometry and Pose based on the Kinematics of the body
-	w_ang = vel_s*sin(steerAngle)/R;
-	//w_ang = angVel;
+	w_ang = angVel;
 	v = vel_s*cos(steerAngle);
 	this->theta = this->theta + (w_ang*deltaT);
 	this->x = this->x + (v*cos(this->theta)*deltaT);
