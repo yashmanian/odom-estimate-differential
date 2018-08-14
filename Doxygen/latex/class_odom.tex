@@ -1,0 +1,79 @@
+\hypertarget{class_odom}{}\section{Odom Class Reference}
+\label{class_odom}\index{Odom@{Odom}}
+
+
+Definition of the Odometer class. It contains all the functions and variables required to calculate Pose.  
+
+
+
+
+{\ttfamily \#include $<$Odom.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_odom_a43a0ddfcf5e6120fdab5f217bf5289a1}{Odom} ()
+\begin{DoxyCompactList}\small\item\em Constructor for the Odometer class. \end{DoxyCompactList}\item 
+\hyperlink{class_odom_a361a163f9ad080a764d9a09567b7f19c}{Odom} (double w, double r, double d, int e)
+\begin{DoxyCompactList}\small\item\em Overload Constructor for the Odometer class. \end{DoxyCompactList}\item 
+\hyperlink{class_odom_ae59d3e9ca275631a390dcd5f33598b20}{$\sim$\+Odom} ()\hypertarget{class_odom_ae59d3e9ca275631a390dcd5f33598b20}{}\label{class_odom_ae59d3e9ca275631a390dcd5f33598b20}
+
+\begin{DoxyCompactList}\small\item\em Destructor for the Odometer class. \end{DoxyCompactList}\item 
+vector$<$ double $>$ \hyperlink{class_odom_a2fe35fdf9e4e778f753062ddd2cc2fe9}{estimate} (double time, double steer\+Angle, int enc\+Ticks, double ang\+Vel)
+\begin{DoxyCompactList}\small\item\em Estimate Pose Function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Definition of the Odometer class. It contains all the functions and variables required to calculate Pose. 
+
+It uses Time, Encoder Values, Steering Angles and Angular Velocity to do so. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Odom@{Odom}!Odom@{Odom}}
+\index{Odom@{Odom}!Odom@{Odom}}
+\subsubsection[{\texorpdfstring{Odom()}{Odom()}}]{\setlength{\rightskip}{0pt plus 5cm}Odom\+::\+Odom (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_odom_a43a0ddfcf5e6120fdab5f217bf5289a1}{}\label{class_odom_a43a0ddfcf5e6120fdab5f217bf5289a1}
+
+
+Constructor for the Odometer class. 
+
+Initializes System variables such as Wheel Radius, Encoder Resolution, and the geometry of the Robot. \index{Odom@{Odom}!Odom@{Odom}}
+\index{Odom@{Odom}!Odom@{Odom}}
+\subsubsection[{\texorpdfstring{Odom(double w, double r, double d, int e)}{Odom(double w, double r, double d, int e)}}]{\setlength{\rightskip}{0pt plus 5cm}Odom\+::\+Odom (
+\begin{DoxyParamCaption}
+\item[{double}]{w, }
+\item[{double}]{r, }
+\item[{double}]{d, }
+\item[{int}]{e}
+\end{DoxyParamCaption}
+)}\hypertarget{class_odom_a361a163f9ad080a764d9a09567b7f19c}{}\label{class_odom_a361a163f9ad080a764d9a09567b7f19c}
+
+
+Overload Constructor for the Odometer class. 
+
+Overloads the constructor to allow user defined values for the Wheel Radius, Encoder resolution and Robot geometry. 
+
+\subsection{Member Function Documentation}
+\index{Odom@{Odom}!estimate@{estimate}}
+\index{estimate@{estimate}!Odom@{Odom}}
+\subsubsection[{\texorpdfstring{estimate(double time, double steer\+Angle, int enc\+Ticks, double ang\+Vel)}{estimate(double time, double steerAngle, int encTicks, double angVel)}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ double $>$ Odom\+::estimate (
+\begin{DoxyParamCaption}
+\item[{double}]{time, }
+\item[{double}]{steer\+Angle, }
+\item[{int}]{enc\+Ticks, }
+\item[{double}]{ang\+Vel}
+\end{DoxyParamCaption}
+)}\hypertarget{class_odom_a2fe35fdf9e4e778f753062ddd2cc2fe9}{}\label{class_odom_a2fe35fdf9e4e778f753062ddd2cc2fe9}
+
+
+Estimate Pose Function. 
+
+Function that takes in the Time Stamp, Steering Angle, Encoder Ticks and the Angular Velocity. Calculates delta between the time stamps and encoder ticks. Determines Velocity and Displacement of the Wheel with the Traction encoder. Based on the geometry of the robot and the steering angles, calculates the total Odometry and Pose. Return Pose Vector. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/yashmanian/\+C\+P\+P/\+Odom\+Estimate/include/Odom.\+hpp\item 
+/home/yashmanian/\+C\+P\+P/\+Odom\+Estimate/src/\hyperlink{_odom_8cpp}{Odom.\+cpp}\end{DoxyCompactItemize}

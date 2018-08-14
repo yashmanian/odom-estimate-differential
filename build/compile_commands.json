@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/yashmanian/CPP/OdomEstimate/build/src",
+  "command": "/usr/bin/c++    -I/home/yashmanian/CPP/OdomEstimate/include  -Wall -Wextra -Wpedantic -g   -std=gnu++14 -o CMakeFiles/OdomEstimate.dir/main.cpp.o -c /home/yashmanian/CPP/OdomEstimate/src/main.cpp",
+  "file": "/home/yashmanian/CPP/OdomEstimate/src/main.cpp"
+},
+{
+  "directory": "/home/yashmanian/CPP/OdomEstimate/build/src",
+  "command": "/usr/bin/c++    -I/home/yashmanian/CPP/OdomEstimate/include  -Wall -Wextra -Wpedantic -g   -std=gnu++14 -o CMakeFiles/OdomEstimate.dir/Odom.cpp.o -c /home/yashmanian/CPP/OdomEstimate/src/Odom.cpp",
+  "file": "/home/yashmanian/CPP/OdomEstimate/src/Odom.cpp"
+}
+]

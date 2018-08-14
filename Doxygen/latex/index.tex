@@ -1,0 +1,89 @@
+\subsection*{Overview}
+
+The objective of this project was to create a function that can estimate the 2D odometry and pose (x, y, heading) for a robot with tricycle kinematics, using a wheel encoder and I\+MU data. The library initializes default robot parameters, but can be overloaded to incorporate custom values for the Robot geometry, Wheel Radius and Encoder Resolution. The robot geometry is defined by r, which is the distance between the front and back wheels, and d, which is the wheel base.\+The class intializes the time to zero and assumes that the encoder gives out negative values when moving in reverse. The range for the steering angle is between -\/90/+90 degrees. The default parameters for the class are initialized to the following values\+:
+
+Wheel Radius = 0.\+2 m Distance between front and back wheels (r) = 1 m Distance between rear wheels (d) = 0.\+75 m Encoder resolution = 512 Initial Pose = \mbox{[}0, 0, 0\mbox{]}
+
+The assumption is made that the Pose exists in a Right Handed Coordinate System.
+
+
+\begin{DoxyItemize}
+\item Inputs\+: 
+\begin{DoxyCode}
+1 time (sec)          -> double
+2 steeringAngle (rad) -> double
+3 encTicks (integer)  -> int
+4 angVel (Rad/s)      -> double
+\end{DoxyCode}
+
+\item Outputs\+: 
+\begin{DoxyCode}
+1 Pose (m, m, rad)    -> vector<double>
+\end{DoxyCode}
+
+\end{DoxyItemize}
+
+Example code on how to use the library has been included in the cpp file \hyperlink{main_8cpp}{src/main.\+cpp}. The values for time stamps, angular velocities and encoder ticks is read from a .csv file in this instance. Outputs are written to a .csv file in the Outputs folder.
+
+\subsection*{How to build and run the tests}
+
+
+\begin{DoxyItemize}
+\item To build and run demo\+: 
+\begin{DoxyCode}
+1 mkdir build
+2 cd build
+3 cmake ..
+4 make
+5 cd src
+6 ./OdomEstimate
+\end{DoxyCode}
+
+\item Run the tests\+: 
+\begin{DoxyCode}
+1 cd build
+2 ./test/matrix-test
+\end{DoxyCode}
+ To use these functions in your own code. Add the include directory path to the compiler debugging. Include to the start of your code and call the functions\+:
+\item To use\+: 
+\begin{DoxyCode}
+1 #include "Odom.hpp" 
+\end{DoxyCode}
+
+\end{DoxyItemize}
+
+\subsection*{Doxygen Documentation}
+
+To generate Doxygen Documentation in H\+T\+ML and La\+T\+EX, follow the next steps\+:
+
+
+\begin{DoxyCode}
+1 cd OdomEstimate
+2 mkdir <documentation\_folder\_name>
+3 cd <documentation\_folder\_name>
+4 doxygen -g <config\_file\_name>
+\end{DoxyCode}
+ Inside the configuration file, update\+: 
+\begin{DoxyCode}
+1 PROJECT\_NAME = 'your project name'
+2 INPUT = ../
+\end{DoxyCode}
+ Run and generate the documents by running the next command\+: 
+\begin{DoxyCode}
+1 doxygen <config\_file\_name>
+\end{DoxyCode}
+ All these steps have already been performed in this project.
+
+To view the documents easily, access {\ttfamily class\+\_\+odom.\+html} and {\ttfamily main\+\_\+8cpp.\+html} with your browser.
+
+\subsection*{License}
+
+M\+IT License
+
+Copyright (c) 2018 Yash Manian
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \char`\"{}\+Software\char`\"{}), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions\+:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+T\+HE S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED \char`\"{}\+A\+S I\+S\char`\"{}, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+TY OF A\+NY K\+I\+ND, E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED, I\+N\+C\+L\+U\+D\+I\+NG B\+UT N\+OT L\+I\+M\+I\+T\+ED TO T\+HE W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY, F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+ND N\+O\+N\+I\+N\+F\+R\+I\+N\+G\+E\+M\+E\+NT. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE A\+U\+T\+H\+O\+RS OR C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY C\+L\+A\+IM, D\+A\+M\+A\+G\+ES OR O\+T\+H\+ER L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN AN A\+C\+T\+I\+ON OF C\+O\+N\+T\+R\+A\+CT, T\+O\+RT OR O\+T\+H\+E\+R\+W\+I\+SE, A\+R\+I\+S\+I\+NG F\+R\+OM, O\+UT OF OR IN C\+O\+N\+N\+E\+C\+T\+I\+ON W\+I\+TH T\+HE S\+O\+F\+T\+W\+A\+RE OR T\+HE U\+SE OR O\+T\+H\+ER D\+E\+A\+L\+I\+N\+GS IN T\+HE S\+O\+F\+T\+W\+A\+RE. 
