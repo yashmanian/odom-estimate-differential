@@ -1,1 +1,0 @@
-/usr/bin/c++   -Wall -Wextra -Wpedantic -g   CMakeFiles/OdomEstimate.dir/main.cpp.o CMakeFiles/OdomEstimate.dir/Odom.cpp.o  -o OdomEstimate -rdynamic 

@@ -29,7 +29,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <iostream>
 #include <math.h>
 #include <vector>
-#include <typeinfo>
 
 #define PI 3.14159265358979323846
 

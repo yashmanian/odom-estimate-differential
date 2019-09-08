@@ -17,7 +17,6 @@ filenameFig = "Figures/figure_" + OP + ext_fig
 
 print filenameM, filenameCpp, filenameFig
 
-#fileIP, fileOP = np.loadtxt("IO_source.csv", delimiter = ' ', unpack = True)
 
 x1, y1, theta1 = np.loadtxt(filenameM, delimiter = ',', unpack = True)
 x2, y2, theta2 = np.loadtxt(filenameCpp, delimiter = ' ', unpack = True)
